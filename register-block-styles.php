@@ -2,12 +2,12 @@
 
 /**
  * Plugin Name: Register Block Styles
- * Version: 0.1.0
+ * Version: 0.1.1
  */
 
 class Register_Block_Styles
 {
-    private static $version = '0.1.0';
+    private static $version = '0.1.1';
 
     private static function wp_enqueue_block_style($blockName, $handle, $relativeFile, $deps)
     {
@@ -29,7 +29,7 @@ class Register_Block_Styles
             'handle' => $handle,
             'src' => $src,
             'deps' => $deps,
-            'ver' => self::$version,
+            'ver' => wp_get_theme()->get('Version'),
         ]);
     }
 
